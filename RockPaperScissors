@@ -1,0 +1,57 @@
+import random
+
+rock = '''
+     ______
+----'   ___)
+      (______)
+      (______)
+      (_____)
+----.__(___)
+'''
+
+paper = '''
+     _______
+----'   ____)_____
+          _________)
+          __________)
+         _________)
+----.__________)
+'''
+
+scissors = '''
+     _______
+----'   ____)_______
+           _________)
+       ____________)
+      (____)
+----.__(___)
+'''
+
+game_images = [rock, paper, scissors]
+
+
+uc = int(input("What do you choose?\n 0 Rock \n 1 Paper\n 2 Scissors\n \n"))
+
+
+cc = random.randint(0,2)
+
+if uc >= 3 and uc > 0:
+  print("You wrote an invalid number")
+else:
+  print("You chose ", game_images[uc])
+  print("The computer chose ", game_images[cc])
+
+  if uc == 0 and cc == 2:
+    print("You win!")
+  elif cc == 0 and uc == 2:
+    print("You lose :( ")
+  elif uc > cc:
+    print("You win!")
+  elif cc > uc:
+    print("You lose :( ")
+  else:
+    print("It's a draw :O ")
+
+  
+
+
